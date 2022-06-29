@@ -14,8 +14,6 @@ export default () => {
 
   const { email } = user
 
-  console.log(user)
-
   const handlePasswordUpdate = async (e) => {
     e.preventDefault();
     try {

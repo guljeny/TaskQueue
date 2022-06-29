@@ -9,8 +9,6 @@ import AuthWrapper from 'components/AuthWrapper'
 import { login, register, profile } from 'constants/routes'
 import auth from 'utils/firebase/auth';
 
-console.log(auth)
-
 export default () => {
   const [isLoading, setIsLoading] = useState(true)
 

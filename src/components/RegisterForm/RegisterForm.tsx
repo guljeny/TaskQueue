@@ -11,8 +11,7 @@ export default () => {
   const handleSumbit = async (e) => {
     e.preventDefault();
     try {
-      const user = await createUserWithEmailAndPassword(auth, email, password)
-      console.log(user);
+      await createUserWithEmailAndPassword(auth, email, password)
     } catch (e: any) {
       setError(e.message)
     }
