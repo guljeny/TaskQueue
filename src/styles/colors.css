@@ -1,0 +1,8 @@
+:root {
+  --color-background-rgb: 245, 252, 251;
+  --color-background: rgb(var(--color-background));
+
+  --color-accent-rgb: 40, 191, 153;
+  --color-accent: rgb(var(--color-accent-rgb));
+}
+

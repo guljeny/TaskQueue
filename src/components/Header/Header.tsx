@@ -1,19 +1,24 @@
-import { Link } from 'react-router-dom'
-import { signOut } from "firebase/auth"
-import useAuth from 'hooks/useAuth'
-import auth from 'utils/firebase/auth';
-import { home, login, register, profile } from 'constants/routes'
+import { Link } from 'react-router-dom';
+import useAuth from 'hooks/useAuth';
+import { home, login, register } from 'constants/routes';
+import UserMenu from 'components/UserMenu';
+
+import styles from './styles.css';
+import templateStyles from 'styles/template.css';
 
 export default () => {
   const user = useAuth()
 
   return (
-    <header>
-      <Link to={home}>Task Queue</Link>
-      {user && <Link to={profile}>Profile</Link>}
-      {user && <button onClick={() => signOut(auth)}>Sign out</button>}
-      {!user && <Link to={login}>Login</Link>}
-      {!user && <Link to={register}>Register</Link>}
+    <header className={styles.header}>
+      <div className={templateStyles.container}>
+        <Link className={styles.logo} to={home}>Task Queue</Link>
+        <div>
+          {user && <UserMenu />}
+          {!user && <Link to={login}>Login</Link>}
+          {!user && <Link to={register}>Register</Link>}
+        </div>
+      </div>
     </header>
   )
 }

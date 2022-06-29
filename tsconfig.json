@@ -30,6 +30,8 @@
       "hooks/*": ["hooks/*"],
       "assets": ["assets"],
       "assets/*": ["assets/*"],
+      "styles": ["styles"],
+      "styles/*": ["styles/*"],
       "secrets": ["TaskQueueSecrets"],
       "secrets/*": ["TaskQueueSecrets/*"]
     }

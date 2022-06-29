@@ -18,8 +18,6 @@ export default () => {
   const user = useAuth();
   const { listId } = useParams();
 
-  if (!listId) return <Navigate to={`/${user.uid}`} replace />;
-
   const roomRef = useMemo(() => ref(db, 'rooms/' + listId), [listId]);
 
   const addMember = (e) => {
@@ -45,6 +43,8 @@ export default () => {
       setMembers(snapshoot.val() || []);
     })
   }, [roomRef]);
+
+  if (!listId) return <Navigate to={`/${user.uid}`} replace />;
 
   return (
     <div>

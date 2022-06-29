@@ -88,6 +88,7 @@ module.exports = {
       "types": path.resolve(__dirname, 'src/types'),
       "hooks": path.resolve(__dirname, 'src/hooks'),
       "assets": path.resolve(__dirname, 'src/assets'),
+      "styles": path.resolve(__dirname, 'src/styles'),
       "secrets": path.resolve(__dirname, 'src/TaskQueueSecrets'),
     },
   },
