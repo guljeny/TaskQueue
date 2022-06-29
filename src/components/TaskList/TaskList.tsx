@@ -2,6 +2,7 @@ import { useEffect, useState, useMemo } from 'react'
 import { Navigate, useParams } from 'react-router-dom'
 import { getDatabase, ref, onValue, set } from "firebase/database";
 import Input from 'components/Input';
+import LoginForm from 'components/LoginForm';
 import useAuth from 'hooks/useAuth'
 import firebaseApp from 'utils/firebase/firebaseApp'
 
@@ -44,7 +45,11 @@ export default () => {
     })
   }, [roomRef]);
 
-  if (!listId) return <Navigate to={`/${user.uid}`} replace />;
+  if (!listId) {
+    if (user) return <Navigate to={`/${user.uid}`} replace />;
+
+    return <LoginForm />;
+  }
 
   return (
     <div>
