@@ -45,6 +45,8 @@ export default () => {
     })
   }, [roomRef]);
 
+  const isOwner = user && user.uid === listId;
+
   if (!listId) {
     if (user) return <Navigate to={`/${user.uid}`} replace />;
 
@@ -53,20 +55,24 @@ export default () => {
 
   return (
     <div>
-      <form onSubmit={addMember}>
-        <Input
-          placeholder='new member'
-          value={newMemberName}
-          onChange={({ target }) => setNewMemberName(target.value)}
-        />
-        <button>Add</button>
-      </form>
+      {isOwner && (
+        <form onSubmit={addMember}>
+          <Input
+            placeholder='new member'
+            value={newMemberName}
+            onChange={({ target }) => setNewMemberName(target.value)}
+          />
+          <button>Add</button>
+        </form>
+      )}
       {members.map(({ id, name }) => (
         <span key={id} onClick={() => onMemberClick(id)}>
           {name}
-          <button onClick={(e) => deleteMember(e, id)}>
-            x
-          </button>
+          {isOwner && (
+            <button onClick={(e) => deleteMember(e, id)}>
+              x
+            </button>
+          )}
         </span>
       ))}
     </div>
