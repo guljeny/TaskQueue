@@ -85,8 +85,10 @@ module.exports = {
       "constants": path.resolve(__dirname, 'src/constants'),
       "components": path.resolve(__dirname, 'src/components'),
       "utils": path.resolve(__dirname, 'src/utils'),
+      "types": path.resolve(__dirname, 'src/types'),
+      "hooks": path.resolve(__dirname, 'src/hooks'),
       "assets": path.resolve(__dirname, 'src/assets'),
-      "secrets": path.resolve(__dirname, 'src/secrets'),
+      "secrets": path.resolve(__dirname, 'src/TaskQueueSecrets'),
     },
   },
   devServer: {

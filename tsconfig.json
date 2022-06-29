@@ -26,10 +26,12 @@
       "utils/*": ["utils/*"],
       "types": ["types"],
       "types/*": ["types/*"],
+      "hooks": ["hooks"],
+      "hooks/*": ["hooks/*"],
       "assets": ["assets"],
       "assets/*": ["assets/*"],
-      "secrets": ["secrets"],
-      "secrets/*": ["secrets/*"]
+      "secrets": ["TaskQueueSecrets"],
+      "secrets/*": ["TaskQueueSecrets/*"]
     }
   },
   "include": ["src"],
