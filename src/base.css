@@ -1,0 +1,11 @@
+:root {
+  --color-background: rgb(20, 21, 31);
+  --color-background-light: rgb(35, 37, 54);
+  --color-background-hover: rgb(63, 66, 92);
+  --color-accent: rgb(255, 151, 0);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
