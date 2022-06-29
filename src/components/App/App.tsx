@@ -28,7 +28,9 @@ export default () => {
         <Route path={login} element={<AuthWrapper><LoginForm /></AuthWrapper>} />
         <Route path={register} element={<AuthWrapper><RegisterForm /></AuthWrapper>} />
         <Route path={profile} element={<Profile />} />
-        <Route path='*' element={<TaskList />} />
+        <Route path='/' element={<TaskList />}>
+          <Route path=':listId' element={<TaskList />} />
+        </Route>
       </Routes>
     </BrowserRouter>
     )
