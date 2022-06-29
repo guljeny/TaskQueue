@@ -89,7 +89,7 @@ module.exports = {
       "hooks": path.resolve(__dirname, 'src/hooks'),
       "assets": path.resolve(__dirname, 'src/assets'),
       "styles": path.resolve(__dirname, 'src/styles'),
-      "secrets": path.resolve(__dirname, 'src/TaskQueueSecrets'),
+      "secrets": path.resolve(__dirname, 'src/secrets'),
     },
   },
   devServer: {

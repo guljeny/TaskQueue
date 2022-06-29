@@ -32,8 +32,8 @@
       "assets/*": ["assets/*"],
       "styles": ["styles"],
       "styles/*": ["styles/*"],
-      "secrets": ["TaskQueueSecrets"],
-      "secrets/*": ["TaskQueueSecrets/*"]
+      "secrets": ["secrets"],
+      "secrets/*": ["secrets/*"]
     }
   },
   "include": ["src"],

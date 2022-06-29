@@ -1,3 +1,0 @@
-[submodule "src/TaskQueueSecrets"]
-	path = src/TaskQueueSecrets
-	url = git@github.com:guljeny/TaskQueueSecrets.git
