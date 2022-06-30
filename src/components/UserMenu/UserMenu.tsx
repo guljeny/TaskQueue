@@ -12,15 +12,17 @@ import styles from './styles.css';
 export default () => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
-  const { email } = useAuth()
+  const user = useAuth()
   useCliclOutside(containerRef, () => setIsOpen(false));
 
   const toggleOpen = () => setIsOpen(prevIsOpen => !prevIsOpen);
 
+  const { email } = user || {};
+
   return (
     <div className={styles.container} ref={containerRef} onClick={toggleOpen}>
       <div className={styles.avatar}>
-        {email.slice(0, 2)}
+        {String(email).slice(0, 2)}
       </div>
       <div className={cn(styles.menu, { [styles.menuVisible]: isOpen })}>
         <Link className={styles.menuButton} to={profile}>Profile</Link>
