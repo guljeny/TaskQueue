@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
-import TaskList from 'components/TaskList'
+import MemberList from 'components/MemberList'
 import Header from 'components/Header'
 import LoginForm from 'components/LoginForm'
 import RegisterForm from 'components/RegisterForm'
@@ -28,8 +28,8 @@ export default () => {
         <Route path={login} element={<AuthWrapper><LoginForm /></AuthWrapper>} />
         <Route path={register} element={<AuthWrapper><RegisterForm /></AuthWrapper>} />
         <Route path={profile} element={<Profile />} />
-        <Route path='/' element={<TaskList />}>
-          <Route path=':listId' element={<TaskList />} />
+        <Route path='/' element={<MemberList />}>
+          <Route path=':listId' element={<MemberList />} />
         </Route>
       </Routes>
     </BrowserRouter>
